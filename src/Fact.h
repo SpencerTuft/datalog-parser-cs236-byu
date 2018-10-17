@@ -8,7 +8,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include "lexer/Token.h"
+#include "Token.h"
 
 class Fact {
  private:

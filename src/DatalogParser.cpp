@@ -6,7 +6,7 @@
 #include <set>
 #include "./DatalogParser.h"
 #include "./Scheme.h"
-#include "./lexer/Token.h"
+#include "Token.h"
 #include "DatalogParser.h"
 
 DatalogParser::DatalogParser(std::string &fileName) {
@@ -182,7 +182,7 @@ Expression DatalogParser::createExpression() {
 
   // Second parameter
   param = requireType(std::vector<std::string>{"STRING", "ID", "LEFT_PAREN"});
-  if (param.ofType("LEFT_PAREN")) newExpression.setFirst(createExpression().toString());
+  if (param.ofType("LEFT_PAREN")) newExpression.setSecond(createExpression().toString());
   else newExpression.setSecond(param.getValue());
 
   requireType("RIGHT_PAREN");

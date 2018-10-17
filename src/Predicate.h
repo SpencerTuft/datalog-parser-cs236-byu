@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <sstream>
-#include "./lexer/Token.h"
+#include "Token.h"
 #include "Parameter.h"
 
 class Predicate {

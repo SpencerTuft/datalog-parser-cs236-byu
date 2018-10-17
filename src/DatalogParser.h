@@ -11,7 +11,7 @@
 #include "./Fact.h"
 #include "./Rule.h"
 #include "./Query.h"
-#include "./lexer/DatalogLexer.h"
+#include "DatalogLexer.h"
 
 class DatalogParser {
  private:

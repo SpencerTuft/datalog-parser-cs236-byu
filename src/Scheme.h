@@ -9,7 +9,7 @@
 #include <string>
 #include <sstream>
 
-#include "lexer/Token.h"
+#include "Token.h"
 
 class Scheme {
  private:

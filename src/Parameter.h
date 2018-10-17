@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 //
@@ -7,7 +9,7 @@
 #ifndef DATALOG_PARSER_CS236_BYU_PARAMETER_H
 #define DATALOG_PARSER_CS236_BYU_PARAMETER_H
 
-#include "./lexer/Token.h"
+#include "Token.h"
 #include "./Expression.h"
 
 class Parameter {
@@ -16,10 +18,10 @@ class Parameter {
   std::string type;
 
  public:
-  Parameter() {};
-  Parameter(Token &token): value(token.getValue()), type(token.getType()) {};
-  Parameter(std::string paramValue, std::string paramType): value(paramValue), type(paramType) {};
-  Parameter(Expression expression): value(expression.toString()), type("EXPRESSION") {};
+  Parameter() = default;
+  explicit Parameter(Token &token): value(token.getValue()), type(token.getType()) {};
+  explicit Parameter(Expression expression): value(expression.toString()), type("EXPRESSION") {};
+  Parameter(std::string paramValue, std::string paramType): value(std::move(paramValue)), type(paramType) {};
 
   void setValue(std::string paramValue) {
     value = paramValue;
