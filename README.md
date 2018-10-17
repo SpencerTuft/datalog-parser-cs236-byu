@@ -23,7 +23,7 @@ Using your lexical analyzer from Project 1, write a parser for the Datalog gramm
 
 If the parse is successful, `S ∈ L(G)`, return the string: 'Success!' followed by all the schemes, facts, rules, queries, and the domain values (i.e., all the strings that appear in the facts). Include the number of items in each list. Note that the domain is a sorted set (no duplicates) of strings.
 
-If the parse is unsuccessful, S ∉ L(G), output 'Failure!' followed by the offending token, (i.e., its triple including its token-ID name, string value, and line number). Note that the parser stops after encountering the first offending token.
+If the parse is unsuccessful, `S ∉ L(G)`, output 'Failure!' followed by the offending token, (i.e., its triple including its token-ID name, string value, and line number). Note that the parser stops after encountering the first offending token.
 
 There are two parts to this project:
 - Recognizing membership in the language with 10 meaningful tests; and
